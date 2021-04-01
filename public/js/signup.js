@@ -1,33 +1,28 @@
-async function signupFormHandler(event) {
-    event.preventDefault();
-  
-    const username = document.querySelector('#username-signup').value.trim();
-    const email = document.querySelector('#email-signup').value.trim();
-    const password = document.querySelector('#password-signup').value.trim();
-    const twitter = document.querySelector('#twitter-signup').value.trim();
-    const github = document.querySelector('#github-signup').value.trim();
-  
-    if (username && email && password) {
+async function createAccount(event) {
+  event.preventDefault();
+
+  const username = document.querySelector('#signup-username').value.trim();
+  const email = document.querySelector('#signup-email').value.trim();
+  const password = document.querySelector('#signup-password').value.trim();
+
+  if (username && email && password) {
       const response = await fetch('/api/users', {
-        method: 'post',
-        body: JSON.stringify({
-          username,
-          email,
-          twitter,
-          github,
-          password
-        }),
-        headers: { 'Content-Type': 'application/json' }
+          method: 'POST',
+          body: JSON.stringify({
+              username,
+              email,
+              password
+          }),
+          headers: { 'Content-Type': 'application/json' }
       });
-  
-      // check the response status
+
       if (response.ok) {
-        console.log('success');
-        document.location.replace('/dashboard');
+          console.log(`Account for ${username} has been created! Happy blogging!`);
+          document.location.replace('/login');
       } else {
-        alert(response.statusText);
+          alert(response.statusText);
       }
-    }
-}
-  
-document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
+  }
+};
+
+document.querySelector('.signup-form').addEventListener('submit', createAccount);

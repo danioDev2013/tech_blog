@@ -1,18 +1,35 @@
- <div class="mb-5 pt-3">
-        <a href="/dashboard/create/"><button id="create-post" class="button is-primary is-pulled-right">create post</button></a>
-        
-        <h2 class="title pb-4">dashboard: your posts</h2><hr>
-{{#if posts.length}}
+<section class="dashboard">
+    <div class='new-blog-link'>
+        <a href='/new-blog' class='create-link'>New Blog Post</a>
+    </div>
+    <div class='is-size-4 past-blog-heading'>
+        <h3>Your Past Blogs</h3>
     </div>
 
-    {{#each posts as |post|}}
-        {{> post-info post}}
-        
-            <a href="/dashboard/edit/{{post.id}}"><button class="button mb-5 ml-5 is-warning">edit post</button></a>
+    {{#each blogs}}
+    <article class="post">
+        <div class="card">
+            <div class='card-header'>
+                <span class='card-header-title is-centered'><a href="/blog/{{id}}">{{title}}</a></span>
+            </div>
+            <div class="card-content content">
+                <span>{{content}}</span>
+            </div>
+            <div class='card-content username'>By: {{User.username}}</div>
+            <div class='card-footer'>
+                <div class='card-footer-item time-stamp'>{{timeStamp createdAt}}</div>
+                <a class='card-footer-item' href="/dashboard/edit/{{id}}">
+                    <div>Edit Blog</div>
+                </a>
+                <a class='card-footer-item' href="/blog/{{id}}">
+                    <div>Comments: {{Comments.length}}</div>
+                </a>
+
+            </div>
         </div>
+    </article>
+
+    {{> comments blogs.Comments}}
+
     {{/each}}
-
-{{else}}
-<h6 class="pb-4 has-text-centered is-italic">you do not currently have any posts</h6>
-
-{{/if}}
+</section>

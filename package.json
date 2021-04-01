@@ -1,33 +1,38 @@
 {
   "name": "tech_blog",
   "version": "1.0.0",
-  "description": "Model-View-Controller (MVC) Tech Blog",
+  "description": "a developer forum",
   "main": "server.js",
-  "scripts": {
-    "test": "jest",
-    "start": "node server.js",
-    "watch": "nodemon server.js",
-    "seed": "node seeds/index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dorley1993/tech_blog"
-  },
-  "author": "Danielle Orley",
-  "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.0",
-    "bulma": "^0.9.0",
     "connect-session-sequelize": "^7.0.4",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
     "express-session": "^1.17.1",
+    "jest": "^26.6.3",
     "mysql2": "^2.2.5",
-    "passport": "^0.4.1",
-    "passport-local": "^1.0.0",
+    "nodemon": "^2.0.6",
     "sequelize": "^6.3.5"
   },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js",
+    "watch": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dorley1993/tech_blog.git"
+  },
+  "keywords": [
+    "developer",
+    "blog",
+    "forum",
+    "post"
+  ],
+  "author": "Danielle Orley",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/dorley1993/tech_blog/issues"
   },
