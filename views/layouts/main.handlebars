@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Babble</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css"
+        integrity="sha512-ZRv40llEogRmoWgZwnsqke3HNzJ0kiI0+pcMgiz2bxO6Ew1DVBtWjVn0qjrXdT3+u+pSN36gLgmJiiQ3cQtyzA=="
+        crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    
+   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+        <nav class="navbar mt-2">
+            <div class="navbar-brand">
+                <a href="/" class="navbar-item">
+                    <h1 class="has-text-black px-3 py-3 has-text-primary">Tech Babble: a tech blog!</h1>
+                </a>
+            </div>
+
+            {{#if loggedIn}}
+            <div class="navbar-end nav-btns">
+                <div class="navbar-item">
+                    <a href="/dashboard" class='button is-primary'>Dashboard</a>
+                </div>
+                <div class="navbar-item">
+                    <a id="logout" class='button is-danger'>logout</a>
+                </div>
+            </div>
+            {{else}}
+            <div class="navbar-end nav-btns">
+                <div class="navbar-item">
+                    <a href="/signup" class='button is-info'>SIGNUP</a>
+                </div>
+                <div class="navbar-item">
+                    <a href="/login" class='button is-primary'>LOGIN</a>
+                </div>
+            </div>
+            {{/if}}
+        </nav>
+    </header>
+
+    <main class="has-background-primary">
+        {{{ body }}}
+    </main>
+
+
+    <footer class="footer rows pb-2">
+        <div class="row-is-full content has-text-centered">
+            <p>
+            <a href="/">homepage</a>{{#if loggedIn}} | 
+            <a href="/dashboard/">dashboard</a> | 
+            <a href="/dashboard/create/">create new post</a>
+            {{else}}
+             | <a href="/login/">login</a>
+            {{/if}}
+            </p>
+        </div>
+      <div class="row-is-full content has-text-centered">
+    <p>
+      <strong>tech babble</strong> by <a href="https://github.com/dorley1993">Danielle Orley</a> | made with <a href="https://bulma.io/">bulma</a> | source code:
+      <a href="https://github.com/dorley1993/tech_blog"><i class="fab fa-github"></i></a> |  
+       <a href="mailto:daniorley1993@gmail.com"><i class="far fa-envelope"></i></a>
+    </p>
+  </div>
+    </footer>
+</div>
+
+{{#if loggedIn}}
+<script src="/javascript/logout.js"></script>
+{{/if}}
+</body>
+
+</html>

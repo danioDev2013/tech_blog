@@ -1,4 +1,4 @@
-async function createAccount(event) {
+async function signupFormHandler(event) {
     event.preventDefault();
   
     const username = document.querySelector('#username-signup').value.trim();
@@ -8,25 +8,26 @@ async function createAccount(event) {
     const github = document.querySelector('#github-signup').value.trim();
   
     if (username && email && password) {
-        const response = await fetch('/api/users', {
-            method: 'POST',
-            body: JSON.stringify({
-                username,
-                email,
-                password,
-                twitter,
-                github
-            }),
-            headers: { 'Content-Type': 'application/json' }
-        });
+      const response = await fetch('/api/users', {
+        method: 'post',
+        body: JSON.stringify({
+          username,
+          email,
+          twitter,
+          github,
+          password
+        }),
+        headers: { 'Content-Type': 'application/json' }
+      });
   
-        if (response.ok) {
-            console.log(`Account for ${username} has been created!`);
-            document.location.replace('/dashboard');
-        } else {
-            alert(response.statusText);
-        }
+      // check the response status
+      if (response.ok) {
+        console.log('success');
+        document.location.replace('/dashboard');
+      } else {
+        alert(response.statusText);
+      }
     }
-  };
+}
   
-  document.querySelector('.signup-form').addEventListener('submit', createAccount);
+document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
