@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css"
         integrity="sha512-ZRv40llEogRmoWgZwnsqke3HNzJ0kiI0+pcMgiz2bxO6Ew1DVBtWjVn0qjrXdT3+u+pSN36gLgmJiiQ3cQtyzA=="
         crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
@@ -17,21 +19,18 @@
 <body>
     <div class="wrapper">
         <header class='has-background-primary-light'>
-            <nav class='navbar has-background-primary-light'>
+            <nav class='navbar has-background-white'>
                 <div class="navbar-brand">
                     <a href="/" class='navbar-item'>
-                        <h1 class='main-font title has-text-primary'>Tech Babble</h1>
+                        <h1 class='main-font title has-text-bold'>Tech Babble</h1>
                     </a>
                 </div>
 
                 {{#if loggedIn}}
                 <div class="navbar-end nav-btns">
                     <div class="navbar-item">
-                        <a href="/dashboard" class='button is-primary'>Dashboard</a>
+                        <a href="/dashboard" class='button' id="btn-dash">Dashboard</a>
                     </div>
-                    {{!-- <div class="navbar-item">
-                        {{Session.username}}
-                    </div> --}}
                     <div class="navbar-item">
                         <a id="logout" class='button is-danger'>logout</a>
                     </div>
@@ -39,17 +38,17 @@
                 {{else}}
                 <div class="navbar-end nav-btns">
                     <div class="navbar-item">
-                        <a href="/signup" class='button is-info'>SIGNUP</a>
+                        <a href="/signup" class='button' id="btn-signup">SIGNUP</a>
                     </div>
                     <div class="navbar-item">
-                        <a href="/login" class='button is-primary'>LOGIN</a>
+                        <a href="/login" class='button' id="btn-login">LOGIN</a>
                     </div>
                 </div>
                 {{/if}}
 
             </nav>
         </header>
-        <main class='has-background-primary'>
+        <main class='color-background'>
 
             {{{body}}}
 

@@ -189,6 +189,10 @@ main {
 .edit-post-form {
   margin-bottom: 5%;
 }
+.title {
+  color:rgb(89, 167, 167);
+  font-family: 'New Tegomin', serif;
+}
 
 footer {
   border-top: 1px solid #ccc;
@@ -196,4 +200,19 @@ footer {
   justify-content: center;
   padding: 1%;
   font-size: 110%;
+}
+
+
+#btn-dash,
+#btn-signup {
+  background-color: #333;
+  color: white;
+}
+#btn-login,
+#login {
+  background-color:rgb(89, 167, 167);
+  color: white;
+}
+.color-background {
+  background-color:rgba(89, 167, 167, 0.562);
 }
