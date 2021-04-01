@@ -58,7 +58,8 @@
   
   ## Questions
 
-    Please visit my **[GitHub profile](https://github.com/dorley1993/)** to check out this and other projects I've created and contributed to.
+  Please visit my 
+   [GitHub profile](https://github.com/dorley1993/) to check out this and other projects I've created and contributed to.
 
   ## License  
 
