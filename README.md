@@ -1,12 +1,12 @@
 <h1 align="center"> Tech Babble! 👋 </h1> 
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
-<a href="https://tech-babble.herokuapp.com/">![Deployed App](https://img.shields.io/badge/Deployed%20App-blue.svg)</a>
+<a href="https://fierce-dawn-00831.herokuapp.com/">![Deployed App](https://img.shields.io/badge/Deployed%20App-blue.svg)</a>
 
   ## Description
   Tech Babble is a developer blog app where users can signup for an account, login with their username and password, publish blog posts, comment on others' posts, and update or delete their own posts. This is a API app folling MVC development using MySQL with Sequeliz as an ORM and Handlebars for the front-end development. Express was used for routing along with Sequelize for accessing the API data, and Express-Session and bcrypt were used for user authentication.
 
- [Heroku Deployed App](https://tech-babble.herokuapp.com/)
+ [Heroku Deployed App](https://fierce-dawn-00831.herokuapp.com/)
 
 
   ## Table of Contents
