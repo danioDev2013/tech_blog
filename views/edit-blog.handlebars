@@ -2,17 +2,17 @@
     <div>
         <h2>Update Your Post</h2>
     </div>
-    <div>
+    <div id="return">
         <a href="/dashboard">Return</a>
     </div>
     <div id='edit-post-el'>
         <form id="edit-post-form">
             <div>
-                <label for="edit-title">Update Title: </label>
+                <label for="edit-title" id="change">Update Title: </label>
                 <input name='edit-title' id='edit-title' value='{{blog.title}}'>
             </div>
             <div>
-                <label for="edit-content">Update Content:</label>
+                <label for="edit-content" id="change">Update Content:</label>
                 <textarea name='edit-content' id='edit-content'>{{blog.content}}</textarea>
             </div>
             <div>

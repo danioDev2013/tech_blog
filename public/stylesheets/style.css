@@ -9,11 +9,12 @@ body, html {
   margin: 0;
   font-family: sans-serif;
   color: #333;
+  background-image: url("../assets/back.png");
 }
 
 a {
   text-decoration: none;
-  color: #225ca3;
+  color: #eef1f1;
   font-weight: bold;
   transition: color .1s;
 }
@@ -23,20 +24,25 @@ a {
 }
 
 .submit-btn {
-  background-color: steelblue;
-  border: 0;
-  margin-top: 15px;
-  padding: 2%;
-  color: white;
-  font-weight: bold;
-  transition: background-color .1s;
-  cursor: pointer;
-  border-radius: 5px;
-  width: 165px;
+  color: #fff !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: rgb(152, 205, 221);
+  padding: 10px;
+  margin-top: 3%;
+  border-radius: 10%;
+  display: inline-block;
+  border: none;
+  text-align: center;
+  transition: all 0.4s ease 0s;
+  font-size: 11px;
+}
+.wrapperForm {
+  color: rgb(152, 205, 221);
 }
 
 button:hover {
-  background-color: blueviolet;
+  background-color: rgba(61, 82, 88, 0.856);
   transition: 0.5s;
 }
 
@@ -45,11 +51,33 @@ button:hover {
   margin: 0;
   padding: 0;
 }
+#post {
+  background-color: rgba(204, 204, 204, 0.671);
+}
+#postHeader {
+  font-size: 20px;
+  color: #333 !important;
+}
+#edit,
+#comment {
+  color: #333 !important;
+}
+#create-post-form,
+#change,
+h2 {
+  color: rgb(152, 221, 181);;
+}
+
+#edit-title,
+#edit-content {
+  color: white !important;
+}
 
 textarea, input {
   padding: .5%;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  background-color: rgba(43, 39, 39, 0.747);
+  border: 1px solid rgb(53, 52, 52);
 }
 
 textarea:focus, input:focus {
@@ -91,9 +119,11 @@ main {
     border-radius: 5px;
     padding: 10px;
     color: white; 
-    background-color: steelblue;
+    background-color: rgb(152, 221, 181);
 }
-
+#new {
+  color: rgb(152, 221, 181);
+}
 .new-blog-link {
     margin: 25px 0;
     text-align: right
@@ -102,6 +132,8 @@ main {
 .past-blog-heading {
   margin-bottom: 15px;
   text-align: center;
+  color: rgb(152, 205, 221);
+
 }
 
 .create-btn {
@@ -124,9 +156,7 @@ main {
     background-color: rgb(255, 44, 44);
 }
 
-.create-link:hover {
-  background-color: darkslateblue;
-}
+
 
 .btn-no-style {
   background: none;
@@ -143,7 +173,7 @@ main {
 
 .btn-no-style:hover {
   background: none;
-  color: #3486eb;
+  color: rgb(152, 205, 221);
 }
 
 .delete-post-btn {
@@ -189,30 +219,51 @@ main {
 .edit-post-form {
   margin-bottom: 5%;
 }
+
 .title {
-  color:rgb(89, 167, 167);
+  color:rgb(152, 205, 221);
   font-family: 'New Tegomin', serif;
 }
 
 footer {
-  border-top: 1px solid #ccc;
   display: flex;
   justify-content: center;
   padding: 1%;
   font-size: 110%;
+  color: #ccc;
+  font-size: 2.5rem;
 }
 
-
+.content {
+  padding: 5px;
+}
 #btn-dash,
 #btn-signup {
-  background-color: #333;
-  color: white;
+  color: #fff !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: rgb(152, 205, 221);
+  padding: 10px;
+  margin-right: 8px;
+  border-radius: 10%;
+  display: inline-block;
+  border: none;
+  text-align: center;
+  transition: all 0.4s ease 0s;
+  font-size: 11px;
 }
 #btn-login,
 #login {
-  background-color:rgb(89, 167, 167);
-  color: white;
+  color: #fff !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: rgba(3, 50, 58, 0.781);
+  padding: 11px;
+  border-radius: 10%;
+  display: inline-block;
+  border: none;
+  text-align: center;
+  transition: all 0.4s ease 0s;
+  font-size: 11px;
 }
-.color-background {
-  background-color:rgba(89, 167, 167, 0.562);
-}
+

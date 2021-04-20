@@ -1,14 +1,16 @@
-async function logoutUser() {
-  const response = await fetch('/api/users/logout', {
-      method: 'post',
-      headers: { 'Content-Type': 'application/json' }
-  });
 
-  if (response.ok) {
-      document.location.replace('/');
-  } else {
-      alert(response.statusText);
-  }
-};
-
-document.querySelector('#logout').addEventListener('click', logoutUser);
+$(document).ready(() => {
+$("#logout").click(() =>
+    {
+        $.ajax({
+            url: "/api/users/logout",
+            type: "POST",
+            headers: {"Content-Type" : "application/json" },
+            success: () => { document.location.replace("/login") },
+            error: (req, text, err) =>
+            {
+                alert(`Something went wrong! Status: ${text}; Error: ${err}`);
+            }
+        });
+    });
+});
